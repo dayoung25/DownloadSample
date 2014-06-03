@@ -21,6 +21,9 @@
 		BE456A63193DC8760093E000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE456A45193DC8760093E000 /* UIKit.framework */; };
 		BE456A6B193DC8760093E000 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE456A69193DC8760093E000 /* InfoPlist.strings */; };
 		BE456A6D193DC8760093E000 /* DownloaderSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE456A6C193DC8760093E000 /* DownloaderSampleTests.m */; };
+		BE456A7B193DD33B0093E000 /* SongDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE456A7A193DD33B0093E000 /* SongDownloader.m */; };
+		BE456A7E193DD38B0093E000 /* SongDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE456A7D193DD38B0093E000 /* SongDownloadManager.m */; };
+		BE456A81193DE5A90093E000 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BE456A80193DE5A90093E000 /* OrderedDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		BE456A68193DC8760093E000 /* DownloaderSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloaderSampleTests-Info.plist"; sourceTree = "<group>"; };
 		BE456A6A193DC8760093E000 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE456A6C193DC8760093E000 /* DownloaderSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloaderSampleTests.m; sourceTree = "<group>"; };
+		BE456A79193DD33B0093E000 /* SongDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDownloader.h; sourceTree = "<group>"; };
+		BE456A7A193DD33B0093E000 /* SongDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDownloader.m; sourceTree = "<group>"; };
+		BE456A7C193DD38B0093E000 /* SongDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDownloadManager.h; sourceTree = "<group>"; };
+		BE456A7D193DD38B0093E000 /* SongDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDownloadManager.m; sourceTree = "<group>"; };
+		BE456A7F193DE5A90093E000 /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
+		BE456A80193DE5A90093E000 /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,12 @@
 		BE456A47193DC8760093E000 /* DownloaderSample */ = {
 			isa = PBXGroup;
 			children = (
+				BE456A7F193DE5A90093E000 /* OrderedDictionary.h */,
+				BE456A80193DE5A90093E000 /* OrderedDictionary.m */,
+				BE456A79193DD33B0093E000 /* SongDownloader.h */,
+				BE456A7A193DD33B0093E000 /* SongDownloader.m */,
+				BE456A7C193DD38B0093E000 /* SongDownloadManager.h */,
+				BE456A7D193DD38B0093E000 /* SongDownloadManager.m */,
 				BE456A50193DC8760093E000 /* AppDelegate.h */,
 				BE456A51193DC8760093E000 /* AppDelegate.m */,
 				BE456A53193DC8760093E000 /* Main.storyboard */,
@@ -249,9 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE456A7E193DD38B0093E000 /* SongDownloadManager.m in Sources */,
 				BE456A58193DC8760093E000 /* ViewController.m in Sources */,
 				BE456A52193DC8760093E000 /* AppDelegate.m in Sources */,
+				BE456A81193DE5A90093E000 /* OrderedDictionary.m in Sources */,
 				BE456A4E193DC8760093E000 /* main.m in Sources */,
+				BE456A7B193DD33B0093E000 /* SongDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +353,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -366,6 +385,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -380,6 +400,7 @@
 				GCC_PREFIX_HEADER = "DownloaderSample/DownloaderSample-Prefix.pch";
 				INFOPLIST_FILE = "DownloaderSample/DownloaderSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,6 +414,7 @@
 				GCC_PREFIX_HEADER = "DownloaderSample/DownloaderSample-Prefix.pch";
 				INFOPLIST_FILE = "DownloaderSample/DownloaderSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -456,6 +478,7 @@
 				BE456A72193DC8760093E000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE456A73193DC8760093E000 /* Build configuration list for PBXNativeTarget "DownloaderSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +487,7 @@
 				BE456A75193DC8760093E000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
